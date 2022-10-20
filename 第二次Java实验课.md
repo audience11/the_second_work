@@ -13,3 +13,87 @@
 开始输入教师开设的课程信息
 学生部分同理
 
+核心代码
+1、创建arraylist类数组队列，存放Professor型元素（P为对象名，Professor泛指数据类型，用于设置p的数据类型，只能为引用数据类型）
+ArrayList<Professor> p = new ArrayList<Professor>();
+2、输出初始界面
+System.out.println("欢迎使用选课系统，请选择需要操作的对象");
+            System.out.println("1、教师系统 | 2、学生系统");
+3、选择分支结构，输入1进入教师系统，输入2进入学生系统
+if(Objects.equals(choice, "1") ) {
+                teachernum++;
+                System.out.println("成功进入教师系统，请再次按1");
+                String choices = scanner.next();
+                switch (choices) {
+                    case "1":
+                        addProfessor(p);
+                        break; 
+                }
+            }
+            else if(Objects.equals(choice,"2"))……
+4、判断该课程是否已经被选择，如没有被选择执行else语句进行选课
+if(p1.getStatus (c1 - 1) == "已被选择") {
+                                System.out.println("重选！");
+                            } else {
+                                p1.setStudent(name,id1, p1.getCourses(c1 - 1));
+                                p1.setStatus(c1 - 1);
+                                p.set((int) Math.ceil((double) c / 5) - 1,p1);
+                                System.out.println("选课完成！\n");
+                                break;
+                            }
+5、再次输入教师信息查看学生选课情况，并判断，如没有学生选该课则输出if语句中的内容，否则输出选课学生信息
+if(p.get(i).getNum() == 0) {
+                    System.out.println("还没有学生选择您的课程！\n");
+                } else {
+                    for(int j = 0; j < p.get(i).getNum(); j++) {
+                        System.out.println("姓名:   " + p.get(i).stu[j][0] + "   id:   "+ p.get(i).stu[j][1] + "    课程:   " + p.get(i).stu[j][2]);
+                    }
+                }
+6、分别创建 String类型二维数组，以存放5行4列和类名对应的对象
+         String类型的一维数组，以存放5个类名对应的对象
+         Int类型的一维数组，以存放5个类名对应的对象1，并分别赋初值为0
+String[][] stu = new String[5][4];
+String[]courses = new String[5];
+int[] status = {0,0,0,0,0};
+核心代码
+1、创建arraylist类数组队列，存放Professor型元素（P为对象名，Professor泛指数据类型，用于设置p的数据类型，只能为引用数据类型）
+ArrayList<Professor> p = new ArrayList<Professor>();
+2、输出初始界面
+System.out.println("欢迎使用选课系统，请选择需要操作的对象");
+            System.out.println("1、教师系统 | 2、学生系统");
+3、选择分支结构，输入1进入教师系统，输入2进入学生系统
+if(Objects.equals(choice, "1") ) {
+                teachernum++;
+                System.out.println("成功进入教师系统，请再次按1");
+                String choices = scanner.next();
+                switch (choices) {
+                    case "1":
+                        addProfessor(p);
+                        break; 
+                }
+            }
+            else if(Objects.equals(choice,"2"))……
+4、判断该课程是否已经被选择，如没有被选择执行else语句进行选课
+if(p1.getStatus (c1 - 1) == "已被选择") {
+                                System.out.println("重选！");
+                            } else {
+                                p1.setStudent(name,id1, p1.getCourses(c1 - 1));
+                                p1.setStatus(c1 - 1);
+                                p.set((int) Math.ceil((double) c / 5) - 1,p1);
+                                System.out.println("选课完成！\n");
+                                break;
+                            }
+5、再次输入教师信息查看学生选课情况，并判断，如没有学生选该课则输出if语句中的内容，否则输出选课学生信息
+if(p.get(i).getNum() == 0) {
+                    System.out.println("还没有学生选择您的课程！\n");
+                } else {
+                    for(int j = 0; j < p.get(i).getNum(); j++) {
+                        System.out.println("姓名:   " + p.get(i).stu[j][0] + "   id:   "+ p.get(i).stu[j][1] + "    课程:   " + p.get(i).stu[j][2]);
+                    }
+                }
+6、分别创建 String类型二维数组，以存放5行4列和类名对应的对象
+         String类型的一维数组，以存放5个类名对应的对象
+         Int类型的一维数组，以存放5个类名对应的对象1，并分别赋初值为0
+String[][] stu = new String[5][4];
+String[]courses = new String[5];
+int[] status = {0,0,0,0,0};
