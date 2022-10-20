@@ -15,7 +15,7 @@
 学生部分同理  
 
 四、流程图  
-
+![image](https://github.com/audience11/the_second_work/blob/main/%E6%B5%81%E7%A8%8B%E5%9B%BE.png)
 五、关键代码  
 1、创建arraylist类数组队列，存放Professor型元素（P为对象名，Professor泛指数据类型，用于设置p的数据类型，只能为引用数据类型）  
 ArrayList<Professor> p = new ArrayList<Professor>();  
